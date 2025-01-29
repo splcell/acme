@@ -1,3 +1,6 @@
+import '@/app/ui/global.css'; //импортируем глобальные стили
+import {inter} from './ui/fonts' //импортируем настроенный шрифт
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* подлключаем шрифт к body */}
+      <body className={`${inter.className} antialiased`}>{children}</body> 
     </html>
   );
 }
